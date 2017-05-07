@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:latest
 MAINTAINER SuperITMan <admin@superitman.com>
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
