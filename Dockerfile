@@ -5,6 +5,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update -y -q && \
     apt-get install -y -q --no-install-recommends\
     fail2ban \
+    iptables \
     exim4 \
     bsd-mailx \
     whois \
