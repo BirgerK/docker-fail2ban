@@ -8,6 +8,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     exim4 \
     bsd-mailx \
     whois \
+    tzdata \
     && rm -rf /var/lib/apt/lists/*
 
 ADD docker-entrypoint.sh /usr/bin/entrypoint.sh
@@ -15,6 +16,5 @@ RUN chmod +x /usr/bin/entrypoint.sh
 
 COPY filter.d/ /etc/fail2ban/filter.d/
 COPY action.d/ /etc/fail2ban/action.d/
-COPY jail.local /etc/fail2ban/
 
 ENTRYPOINT ["/usr/bin/entrypoint.sh"]
