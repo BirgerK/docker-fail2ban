@@ -1,11 +1,10 @@
-FROM debian:latest
-MAINTAINER SuperITMan <admin@superitman.com>
+FROM ubuntu:latest
+MAINTAINER SuperITMan <admin@superitman.com>, birgerk <birger.kamp@googlemail.com>
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update -y -q && \
     apt-get install -y -q --no-install-recommends\
     fail2ban \
-    iptables \
     exim4 \
     bsd-mailx \
     whois \
